@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Трофимова Элла</title>
+  <title>Трофимова Элла — Аналитик данных / Data Quality Analyst</title>
   <style>
     :root {
       --accent: #1f4e79;
@@ -36,6 +36,7 @@
       box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
     }
 
+    /* === Стили для шапки === */
     header {
       padding-bottom: 18px;
       border-bottom: 2px solid var(--accent);
@@ -43,28 +44,38 @@
     }
 
     h1 {
-      margin: 0 0 14px;
+      margin: 0 0 6px;
       font-size: 34px;
       line-height: 1.2;
       color: var(--accent);
     }
 
-    .contact {
-      margin: 0 0 6px;
+    .role {
+      margin: 0 0 14px;
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--muted);
+    }
+
+    .contacts {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 18px;
       font-size: 15px;
     }
 
-    .contact a {
+    .contacts a {
       color: var(--text);
       text-decoration: none;
       border-bottom: 1px solid transparent;
     }
 
-    .contact a:hover {
+    .contacts a:hover {
       color: var(--accent);
       border-bottom-color: var(--accent);
     }
 
+    /* === Остальные стили === */
     section {
       margin-bottom: 26px;
     }
@@ -77,17 +88,12 @@
       border-bottom: 1px solid var(--line);
     }
 
-    h3 {
-      margin: 4px 0 8px;
-      font-size: 17px;
-    }
-
     p {
       margin: 0 0 10px;
     }
 
     ul {
-      margin: 6px 0 10px;
+      margin: 6px 0 0;
       padding-left: 22px;
     }
 
@@ -96,21 +102,46 @@
     }
 
     .job {
-      margin-bottom: 22px;
+      margin-bottom: 18px;
     }
 
     .job:last-child {
       margin-bottom: 0;
     }
 
-    .date {
-      margin: 0 0 2px;
-      color: var(--muted);
-      font-size: 15px;
+    .job-header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 4px 16px;
+      margin-bottom: 5px;
     }
 
-    .skill-line {
-      margin: 0 0 4px;
+    .job-title {
+      font-weight: 700;
+    }
+
+    .job-date {
+      color: var(--muted);
+      white-space: nowrap;
+    }
+
+    .tech {
+      margin-top: 6px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .skills-list li {
+      margin-bottom: 8px;
+    }
+
+    .skills-list strong {
+      color: var(--accent);
+    }
+
+    .project-details p {
+      margin-bottom: 6px;
     }
 
     @media (max-width: 640px) {
@@ -127,6 +158,10 @@
 
       h1 {
         font-size: 28px;
+      }
+
+      .job-date {
+        white-space: normal;
       }
     }
 
@@ -151,61 +186,98 @@
 </head>
 <body>
   <main class="resume">
+    
+    <!-- Шапка с контактами -->
     <header>
       <h1>Трофимова Элла</h1>
-      <p class="contact">e-mail: <a href="mailto:ella.trofimova2403@gmail.com">ella.trofimova2403@gmail.com</a></p>
-      <p class="contact">тел.: <a href="tel:+79169916181">+7 916 991 6181</a></p>
-      <p class="contact">github: <a href="https://github.com/ellonka" target="_blank" rel="noopener">https://github.com/ellonka</a></p>
+      <p class="role">Цель: Аналитик данных / Data Quality Analyst</p>
+      
+      <div class="contacts">
+        <span>e-mail: <a href="mailto:ella.trofimova2403@gmail.com">ella.trofimova2403@gmail.com</a></span>
+        <span>тел.: <a href="tel:+79169916181">+7 916 991 6181</a></span>
+        <span>github: <a href="https://github.com/ellonka" target="_blank" rel="noopener">https://github.com/ellonka</a></span>
+      </div>
     </header>
 
+    <!-- Основной текст резюме (без изменений) -->
     <section>
-      <h2>Обо мне:</h2>
-      <p>Java-разработчик с 4+ годами коммерческого опыта в enterprise-разработке. Специализируюсь на интеграции со сторонними сервисами, создании справочников и автоматизации обработки данных. Имею опыт работы с 1С и написания скриптов на Python, JS, VBA, C.</p>
+      <h2>Обо мне</h2>
+      <p>
+        Аналитик с сильным математическим бэкграундом (МФТИ) и опытом работы с корпоративными данными (Enterprise, MDM). Специализируюсь на управлении мастер-данными, обеспечении качества (Data Quality), маппинге и интеграции. Уверенно владею SQL и Python (pandas) для обработки данных. Понимаю архитектуру учетных систем, умею описывать процессы в BPMN и переводить бизнес-требования в технические задачи.
+      </p>
     </section>
 
     <section>
-      <h2>Образование:</h2>
-      <p>2009 -2014 МФТИ (ГУ), направление: прикладная математика и физика</p>
+      <h2>Навыки</h2>
+      <ul class="skills-list">
+        <li><strong>Анализ и обработка данных:</strong> Python (pandas, numpy), SQL (оконные функции, JOIN, группировки), VBA.</li>
+        <li><strong>Data Quality и MDM:</strong> SAP MDM, формирование "золотой записи", оценка полноты (completeness), разрешение конфликтов, маппинг.</li>
+        <li><strong>Инструменты и процессы:</strong> Git, Excel, BPMN (AS-IS / TO-BE), понимание архитектуры 1С (справочники, регистры).</li>
+        <li><strong>Веб и API:</strong> FastAPI, HTML/CSS, JS, интеграция со сторонними сервисами.</li>
+      </ul>
     </section>
 
     <section>
-      <h2>Опыт работы:</h2>
+      <h2>Опыт работы</h2>
 
-      <article class="job">
-        <p class="date">Август 2021 — настоящее время</p>
-        <h3>АО «Гринатом», Java-разработчик</h3>
+      <div class="job">
+        <div class="job-header">
+          <span class="job-title">АО «Гринатом» | Аналитик-разработчик MDM</span>
+          <span class="job-date">Август 2021 — настоящее время</span>
+        </div>
+        <p class="tech">Управление мастер-данными, интеграции и обеспечение качества данных.</p>
         <ul>
-          <li>Создание справочников и их пользовательского представления</li>
-          <li>Интеграция со сторонними сервисами</li>
-          <li>Импорт и экспорт данных с маппингом и приведением форматов</li>
+          <li>Спроектировала и поддерживала архитектуру справочников (аналог справочников 1С) в SAP MDM, обеспечив единый источник правды для смежных систем.</li>
+          <li>Настраивала процессы импорта и экспорта: писала скрипты маппинга, приводила форматы, контролировала полноту (completeness) и непротиворечивость данных.</li>
+          <li>Разрабатывала логику разрешения конфликтов при дублировании записей из разных источников (формирование "золотой записи" по заданным бизнес-правилам).</li>
+          <li>Анализировала API сторонних сервисов для настройки бесшовной интеграции. Стек: SAP MDM, SQL, Python, Java EE.</li>
         </ul>
-        <p>Используемые технологии: SAP MDM, Java EE, Web Dynpro</p>
-      </article>
+      </div>
 
-      <article class="job">
-        <p class="date">Март 2020 — Август 2021</p>
-        <h3>АО «Гринатом», Менеджер образовательных проектов</h3>
-        <p>Организация с нуля программ стажировок для студентов по направлениям разработки и тестирования</p>
-      </article>
+      <div class="job">
+        <div class="job-header">
+          <span class="job-title">АО «Гринатом» | Аналитик процессов / Менеджер проектов</span>
+          <span class="job-date">Март 2020 — Август 2021</span>
+        </div>
+        <ul>
+          <li>Моделировала бизнес-процессы в нотации BPMN для программ стажировок.</li>
+          <li>Собирала требования от заказчиков, формализовала AS-IS и проектировала TO-BE.</li>
+          <li>Выстраивала метрики оценки эффективности образовательных программ.</li>
+        </ul>
+      </div>
 
-      <article class="job">
-        <p class="date">Сентябрь 2014 — Август 2019</p>
-        <h3>АО «АВВYY», Менеджер образовательных проектов</h3>
-        <p>Организация набора и обучения на кафедрах, стажировок для студентов, внутренних экзаменов разработчиков</p>
-      </article>
+      <div class="job">
+        <div class="job-header">
+          <span class="job-title">АО «АВВYY» | Менеджер образовательных проектов</span>
+          <span class="job-date">Сентябрь 2014 — Август 2019</span>
+        </div>
+        <ul>
+          <li>Организовывала процессы набора, выстраивала воронки кандидатов и аналитику конверсий.</li>
+          <li>Взаимодействовала с техническими командами для разработки систем оценки.</li>
+        </ul>
+      </div>
     </section>
 
     <section>
-      <h2>Навыки:</h2>
-      <p class="skill-line">Java</p>
-      <p class="skill-line">git, SQL</p>
-      <p class="skill-line">Python, HTML/CSS, JS</p>
+      <h2>Релевантный проект</h2>
+      <div class="job">
+        <div class="job-header">
+          <span class="job-title">Автоматизация генерации отчетности</span>
+          <span class="job-date">Python, FastAPI</span>
+        </div>
+        <div class="project-details">
+          <p><strong>Задача:</strong> Отфильтровать массив данных по сложным критериям и сгенерировать пакет документов (docx) на основе шаблонов.</p>
+          <p><strong>Решение:</strong> Написала скрипт на Python (pandas) для выгрузки, очистки и валидации данных из Excel. Подняла локальный сервис на FastAPI для автоматической подстановки данных в шаблоны.</p>
+          <p><strong>Результат:</strong> Сократила время подготовки отчетности с нескольких часов до минут, исключив ручной труд и ошибки.</p>
+        </div>
+      </div>
     </section>
 
     <section>
-      <h2>Релевантный проект:</h2>
-      <p>Cформировать список кандидатов на награждение по заданным критериям в excel. Cгенерировать заполненные наградные листы по шаблону в формате docx. Данные взять из сформированного списка кандидатов.</p>
-      <p>Используемые технологии: Python, FastAPI</p>
+      <h2>Образование</h2>
+      <p><strong>2009 — 2014 | МФТИ (ГУ)</strong><br>
+      Направление: Прикладная математика и физика<br>
+      Фундаментальная база: математическая статистика, теория вероятностей, алгоритмы.</p>
     </section>
   </main>
 </body>
