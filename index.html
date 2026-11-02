@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Трофимова Элла — Java-разработчик</title>
+  <title>Трофимова Элла</title>
   <style>
     :root {
       --accent: #1f4e79;
@@ -43,33 +43,24 @@
     }
 
     h1 {
-      margin: 0 0 6px;
+      margin: 0 0 14px;
       font-size: 34px;
       line-height: 1.2;
       color: var(--accent);
     }
 
-    .role {
-      margin: 0 0 14px;
-      font-size: 18px;
-      font-weight: 600;
-      color: var(--muted);
-    }
-
-    .contacts {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px 18px;
+    .contact {
+      margin: 0 0 6px;
       font-size: 15px;
     }
 
-    .contacts a {
+    .contact a {
       color: var(--text);
       text-decoration: none;
       border-bottom: 1px solid transparent;
     }
 
-    .contacts a:hover {
+    .contact a:hover {
       color: var(--accent);
       border-bottom-color: var(--accent);
     }
@@ -86,12 +77,17 @@
       border-bottom: 1px solid var(--line);
     }
 
+    h3 {
+      margin: 4px 0 8px;
+      font-size: 17px;
+    }
+
     p {
       margin: 0 0 10px;
     }
 
     ul {
-      margin: 6px 0 0;
+      margin: 6px 0 10px;
       padding-left: 22px;
     }
 
@@ -100,61 +96,26 @@
     }
 
     .job {
-      margin-bottom: 18px;
+      margin-bottom: 22px;
     }
 
     .job:last-child {
       margin-bottom: 0;
     }
 
-    .job-header {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 4px 16px;
-      margin-bottom: 5px;
-    }
-
-    .job-title {
-      font-weight: 700;
-    }
-
-    .job-date {
+    .date {
+      margin: 0 0 2px;
       color: var(--muted);
-      white-space: nowrap;
-    }
-
-    .company {
-      margin-bottom: 6px;
-      font-weight: 600;
+      font-size: 15px;
     }
 
     .tech {
-      margin-top: 6px;
       color: var(--muted);
       font-size: 14px;
     }
 
-    .skills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      padding: 0;
-      margin: 0;
-      list-style: none;
-    }
-
-    .skills li {
-      margin: 0;
-      padding: 5px 10px;
-      font-size: 14px;
-      background: #eef3f8;
-      border: 1px solid #d7e2ee;
-      border-radius: 999px;
-    }
-
-    .muted {
-      color: var(--muted);
+    .skill-line {
+      margin: 0 0 4px;
     }
 
     @media (max-width: 640px) {
@@ -172,10 +133,6 @@
       h1 {
         font-size: 28px;
       }
-
-      .job-date {
-        white-space: normal;
-      }
     }
 
     @media print {
@@ -191,11 +148,6 @@
         border-radius: 0;
       }
 
-      .contacts a {
-        color: #000;
-        text-decoration: none;
-      }
-
       section {
         page-break-inside: avoid;
       }
@@ -206,85 +158,59 @@
   <main class="resume">
     <header>
       <h1>Трофимова Элла</h1>
-      <p class="role">Java-разработчик</p>
-      <div class="contacts">
-        <a href="mailto:ella.trofimova2403@gmail.com">ella.trofimova2403@gmail.com</a>
-        <a href="tel:+79169916181">+7 916 991-61-81</a>
-        <a href="https://github.com/ellonka" target="_blank" rel="noopener">github.com/ellonka</a>
-      </div>
+      <p class="contact">e-mail: <a href="mailto:ella.trofimova2403@gmail.com">ella.trofimova2403@gmail.com</a></p>
+      <p class="contact">тел.: <a href="tel:+79169916181">+7 916 991 6181</a></p>
+      <p class="contact">github: <a href="https://github.com/ellonka" target="_blank" rel="noopener">https://github.com/ellonka</a></p>
     </header>
 
     <section>
-      <h2>Обо мне</h2>
-      <p>
-        Java-разработчик с 4+ годами коммерческого опыта в enterprise-разработке.
-        Специализируюсь на интеграции со сторонними сервисами, создании справочников
-        и автоматизации обработки данных. Имею опыт работы с 1С и написания скриптов
-        на Python, JS, VBA, C.
-      </p>
+      <h2>Обо мне:</h2>
+      <p>Java-разработчик с 4+ годами коммерческого опыта в enterprise-разработке. Специализируюсь на интеграции со сторонними сервисами, создании справочников и автоматизации обработки данных. Имею опыт работы с 1С и написания скриптов на Python, JS, VBA, C.</p>
     </section>
 
     <section>
-      <h2>Образование</h2>
-      <p><strong>2009–2014</strong> — МФТИ (ГУ), направление «Прикладная математика и физика».</p>
+      <h2>Образование:</h2>
+      <p>2009 -2014 МФТИ (ГУ), направление: прикладная математика и физика</p>
     </section>
 
     <section>
-      <h2>Опыт работы</h2>
+      <h2>Опыт работы:</h2>
 
-      <div class="job">
-        <div class="job-header">
-          <span class="job-title">АО «Гринатом», Java-разработчик</span>
-          <span class="job-date">Август 2021 — настоящее время</span>
-        </div>
+      <article class="job">
+        <p class="date">Август 2021 — настоящее время</p>
+        <h3>АО «Гринатом», Java-разработчик</h3>
         <ul>
-          <li>Создание справочников и их пользовательского представления.</li>
-          <li>Интеграция со сторонними сервисами.</li>
-          <li>Импорт и экспорт данных с маппингом и приведением форматов.</li>
+          <li>Создание справочников и их пользовательского представления</li>
+          <li>Интеграция со сторонними сервисами</li>
+          <li>Импорт и экспорт данных с маппингом и приведением форматов</li>
         </ul>
-        <p class="tech">Используемые технологии: SAP MDM, Java EE, Web Dynpro.</p>
-      </div>
+        <p class="tech">Используемые технологии: SAP MDM, Java EE, Web Dynpro</p>
+      </article>
 
-      <div class="job">
-        <div class="job-header">
-          <span class="job-title">АО «Гринатом», Менеджер образовательных проектов</span>
-          <span class="job-date">Март 2020 — Август 2021</span>
-        </div>
-        <p>Организация с нуля программ стажировок для студентов по направлениям разработки и тестирования.</p>
-      </div>
+      <article class="job">
+        <p class="date">Март 2020 — Август 2021</p>
+        <h3>АО «Гринатом», Менеджер образовательных проектов</h3>
+        <p>Организация с нуля программ стажировок для студентов по направлениям разработки и тестирования</p>
+      </article>
 
-      <div class="job">
-        <div class="job-header">
-          <span class="job-title">АО «ABBYY», Менеджер образовательных проектов</span>
-          <span class="job-date">Сентябрь 2014 — Август 2019</span>
-        </div>
-        <p>Организация набора и обучения на кафедрах, стажировок для студентов, внутренних экзаменов разработчиков.</p>
-      </div>
+      <article class="job">
+        <p class="date">Сентябрь 2014 — Август 2019</p>
+        <h3>АО «АВВYY», Менеджер образовательных проектов</h3>
+        <p>Организация набора и обучения на кафедрах, стажировок для студентов, внутренних экзаменов разработчиков</p>
+      </article>
     </section>
 
     <section>
-      <h2>Навыки</h2>
-      <ul class="skills">
-        <li>Java</li>
-        <li>Git</li>
-        <li>SQL</li>
-        <li>Python</li>
-        <li>FastAPI</li>
-        <li>HTML/CSS</li>
-        <li>JS</li>
-        <li>VBA</li>
-        <li>C</li>
-      </ul>
+      <h2>Навыки:</h2>
+      <p class="skill-line">Java</p>
+      <p class="skill-line">git, SQL</p>
+      <p class="skill-line">Python, HTML/CSS, JS</p>
     </section>
 
     <section>
-      <h2>Релевантный проект</h2>
-      <ul>
-        <li>Сформировать список кандидатов на награждение по заданным критериям в Excel.</li>
-        <li>Сгенерировать заполненные наградные листы по шаблону в формате DOCX.</li>
-        <li>Данные берутся из сформированного списка кандидатов.</li>
-      </ul>
-      <p class="tech">Используемые технологии: Python, FastAPI.</p>
+      <h2>Релевантный проект:</h2>
+      <p>Cформировать список кандидатов на награждение по заданным критериям в excel. Cгенерировать заполненные наградные листы по шаблону в формате docx. Данные взять из сформированного списка кандидатов.</p>
+      <p class="tech">Используемые технологии: Python, FastAPI</p>
     </section>
   </main>
 </body>
